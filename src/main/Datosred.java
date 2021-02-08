@@ -60,6 +60,7 @@ public class Datosred extends HttpServlet {
 			
 		 
 		 request.setAttribute("datos",datos);
+		 request.setAttribute("error","error");
 		 
 		 despachador = request.getServletContext().getRequestDispatcher("/index.jsp");
 		 despachador.forward(request, response);
