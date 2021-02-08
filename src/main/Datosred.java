@@ -36,7 +36,7 @@ public class Datosred extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		RequestDispatcher despachador = null;
-		
+		/*
 		 HashMap<String, String> datos = new HashMap<String, String>();
 		 
 		 InetAddress ip;
@@ -59,7 +59,7 @@ public class Datosred extends HttpServlet {
 		 datos.put("Java Version", System.getProperty("java.version").toLowerCase());
 			
 		 
-		 request.setAttribute("datos",datos);
+		 request.setAttribute("datos",datos);*/
 		 request.setAttribute("error","error");
 		 
 		 despachador = request.getServletContext().getRequestDispatcher("/index.jsp");
