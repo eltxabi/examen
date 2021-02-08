@@ -10,18 +10,21 @@
 </head>
 <body>
 <table> 
-   		<tr> 
+
+		<tr> 
           <th><b>Dato</b></th> 
           <th><b>Valor</b></th> 
         </tr>
-         <% HashMap<String,String> datos=(HashMap<String,String>)request.getAttribute("datos"); 
-	    	if (datos != null){	
+         <% HashMap<String,String> datos=(HashMap<String,String>)request.getAttribute("datos"); %>
+        
+	    	<%if (datos != null){	
 	    		for (String i : datos.keySet()) {%> 
-	            <tr> 
+	    		<tr> 
 	                <td><%=i%></td> 
 	                <td><%=datos.get(i)%></td> 
 	            </tr> 
-              <%}
+              <%} 
+              
 	         }%> 
     </table>  
 

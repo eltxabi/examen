@@ -34,14 +34,17 @@ public class Datosred extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		RequestDispatcher despachador = null;
+		
 		 HashMap<String, String> datos = new HashMap<String, String>();
-		 RequestDispatcher despachador = null;
+		 
 		 InetAddress ip;
 		 ip = InetAddress.getLocalHost();
 		 Calendar c = Calendar.getInstance();
 		 TimeZone tz = c.getTimeZone();
 		 Date date = new Date();
-	
+		 	
 		 datos.put("HostName", ip.getHostName());
 		 datos.put("HostAddress", ip.getHostAddress());
 		 datos.put("OS Name", System.getProperty("os.name").toLowerCase());
@@ -54,9 +57,10 @@ public class Datosred extends HttpServlet {
 		 datos.put("User Dir", System.getProperty("user.dir").toLowerCase());
 		 datos.put("Java Vendor", System.getProperty("java.vendor").toLowerCase());
 		 datos.put("Java Version", System.getProperty("java.version").toLowerCase());
-		
+			
 		 
 		 request.setAttribute("datos",datos);
+		 
 		 despachador = request.getServletContext().getRequestDispatcher("/index.jsp");
 		 despachador.forward(request, response);
 		
