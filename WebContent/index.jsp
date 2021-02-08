@@ -12,24 +12,7 @@
  <% String error = (String)request.getAttribute("error");
         out.println(error);
         %>
-<table> 
 
-		<tr> 
-          <th><b>Dato</b></th> 
-          <th><b>Valor</b></th> 
-        </tr>
-         <% HashMap<String,String> datos=(HashMap<String,String>)request.getAttribute("datos"); %>
-       
-	    	<%if (datos != null){	
-	    		for (String i : datos.keySet()) {%> 
-	    		<tr> 
-	                <td><%=i%></td> 
-	                <td><%=datos.get(i)%></td> 
-	            </tr> 
-              <%} 
-              
-	         }%> 
-    </table>  
 
 </body>
 </html>
