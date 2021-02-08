@@ -9,6 +9,9 @@
 <title>Examen</title>
 </head>
 <body>
+ <% String error = (String)request.getAttribute("error");
+        out.println(error);
+        %>
 <table> 
 
 		<tr> 
@@ -16,9 +19,7 @@
           <th><b>Valor</b></th> 
         </tr>
          <% HashMap<String,String> datos=(HashMap<String,String>)request.getAttribute("datos"); %>
-        <% String error = (String)request.getAttribute("error");
-        out.println(error);
-        %>
+       
 	    	<%if (datos != null){	
 	    		for (String i : datos.keySet()) {%> 
 	    		<tr> 
