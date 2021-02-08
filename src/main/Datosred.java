@@ -58,7 +58,7 @@ public class Datosred extends HttpServlet {
 		 request.setAttribute("datos",datos);*/
 		 request.setAttribute("error","error");
 		 
-		 despachador = request.getServletContext().getRequestDispatcher("/index.jsp");
+		 despachador = request.getServletContext().getRequestDispatcher("/inicio.jsp");
 		 despachador.forward(request, response);
 		
 	}
