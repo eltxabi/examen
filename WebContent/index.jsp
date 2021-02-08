@@ -16,7 +16,7 @@
           <th><b>Valor</b></th> 
         </tr>
          <% HashMap<String,String> datos=(HashMap<String,String>)request.getAttribute("datos"); %>
-        
+        <% out.println(datos);%>
 	    	<%if (datos != null){	
 	    		for (String i : datos.keySet()) {%> 
 	    		<tr> 
